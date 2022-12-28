@@ -1,0 +1,912 @@
+{
+	"info": {
+		"_postman_id": "db33e681-6563-4aff-a22f-8b389786ba37",
+		"name": "Simple Grocery Store API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20683446"
+	},
+	"item": [
+		{
+			"name": "API LINK",
+			"item": [
+				{
+					"name": "GET RESPONSE FROM API LINK WITHOUT ANY ENDPOINT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							]
+						},
+						"description": "GITHUB LINK :\n\n[https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md](https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md)\n\nAPI LINK:\n\nStartFragment\n\n`https://simple-grocery-store-api.glitch.me`\n\nEndFragment\n\n  \nSEE THE RESPONSE BODY OF THE GET REQUEST METHOD."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API STATUS",
+			"item": [
+				{
+					"name": "GET RESPONSE FOR API STATUS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/status",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"status"
+							]
+						},
+						"description": "GITHUB LINK :\n\n[https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md](https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md)\n\nAPI LINK:\n\nStartFragment\n\n`https://simple-grocery-store-api.glitch.me`\n\nEndFragment\n\nSEE THE RESPONSE BODY OF THE GET REQUEST METHOD.\n\nIN THE URL THE ENDPOINT IS status."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET ALL PROCUTS FROM GROCERY STORE",
+			"item": [
+				{
+					"name": "GET RESPONSE FOR PRODUCT LIST FROM THE GROCERY STORE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let myResponse = pm.response.json();\r",
+									"console.log(myResponse.length);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/products",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"products"
+							]
+						},
+						"description": "GITHUB LINK :\n\n[https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md](https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md)\n\nAPI LINK:\n\nStartFragment\n\nStartFragment\n\nhttps://simple-grocery-store-api.glitch.me/products\n\nEndFragment\n\nEndFragment\n\nSEE THE RESPONSE BODY OF THE GET REQUEST METHOD.\n\nIN THE URL THE ENDPOINT IS products."
+					},
+					"response": []
+				},
+				{
+					"name": "GET RESPONSE FOR CATEGORY OF PRODUCTS FROM GROCERY STORE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let myResponse = pm.response.json();\r",
+									"console.log(myResponse.length);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/products?category=meat-seafood",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "meat-seafood"
+								},
+								{
+									"key": "category",
+									"value": "fresh-produce",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "candy",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "bread-bakery",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "dairy",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "eggs",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "coffee",
+									"disabled": true
+								}
+							]
+						},
+						"description": "GITHUB LINK :\n\n[https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md](https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md)\n\nAPI LINK:\n\nStartFragment\n\nStartFragment\n\nhttps://simple-grocery-store-api.glitch.me/products?category=meat-seafood\n\nEndFragment\n\nEndFragment\n\nSEE THE RESPONSE BODY OF THE GET REQUEST METHOD.\n\nIN THE QUERY PARAMETER IS category = meat-seafood"
+					},
+					"response": []
+				},
+				{
+					"name": "GET RESPONSE FOR NUMBER OF PRODUCTS REQUESTED",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let myResponse = pm.response.json();\r",
+									"console.log(myResponse.length);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/products?results=11",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "results",
+									"value": "11"
+								}
+							]
+						},
+						"description": "GITHUB LINK :\n\n[https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md](https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md)\n\nAPI LINK:\n\nStartFragment\n\nStartFragment\n\nhttps://simple-grocery-store-api.glitch.me/products?results=11\n\nEndFragment\n\nEndFragment\n\nSEE THE RESPONSE BODY OF THE GET REQUEST METHOD.\n\nIN THE QUERY PARAMETER IS results=11"
+					},
+					"response": []
+				},
+				{
+					"name": "GET RESONSE FOR AVAILBILITY OF PRODUCTS FROM GROCERY STORE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let myResponse = pm.response.json();\r",
+									"console.log(myResponse.length);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/products?available=false",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "available",
+									"value": "false"
+								},
+								{
+									"key": "available",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						},
+						"description": "GITHUB LINK :\n\n[https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md](https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md)\n\nAPI LINK:\n\nStartFragment\n\nStartFragment\n\nhttps://simple-grocery-store-api.glitch.me/products?available=false\n\nEndFragment\n\nEndFragment\n\nSEE THE RESPONSE BODY OF THE GET REQUEST METHOD.\n\nIN THE QUERY PARAMETER IS available=false"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET SINGLE PRODUCT FROM GROCERY STORE",
+			"item": [
+				{
+					"name": "GET SINGLE PRODUCT FROM GROCERY STORE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/products/:productId",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"products",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "7395"
+								}
+							]
+						},
+						"description": "SINGLE PRODUCT LINK:\n\nStartFragment\n\nhttps://simple-grocery-store-api.glitch.me/products/:productId\n\nEndFragment\n\nHERE PATH PARAMETER IS productId."
+					},
+					"response": []
+				},
+				{
+					"name": "GET PRODUCT LABEL OF PRODUCT FROM GROCERY STORE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/products/:productId?product-label=true",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"products",
+								":productId"
+							],
+							"query": [
+								{
+									"key": "product-label",
+									"value": "true"
+								}
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "4643"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CREATE A CART",
+			"item": [
+				{
+					"name": "CREATE A CART IN GROCERY STORE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET CART",
+			"item": [
+				{
+					"name": "GET CART IN GROCERY STORE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/:cartId",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								":cartId"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "jDBuTNfDO09NpcSg6d6me"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CART ITEMS FROM CART",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/:cartId/items",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								":cartId",
+								"items"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "nVo4eeF7518VMlyMCg6Pb"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ADD ITEMS TO THE CART",
+			"item": [
+				{
+					"name": "ADD AVAILABLE ITEMS IN CART",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 7395,\r\n    \"quantity\": 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/:cartId/items",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								":cartId",
+								"items"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "nVo4eeF7518VMlyMCg6Pb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD UNAVAILABLE ITEMS IN CART",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 5851,\r\n    \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/:cartId/items",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								":cartId",
+								"items"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "jDBuTNfDO09NpcSg6d6me"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MODIFY ITEMS AVAILABLE IN CART",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/:cartId/items/:itemId",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								":cartId",
+								"items",
+								":itemId"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "jDBuTNfDO09NpcSg6d6me"
+								},
+								{
+									"key": "itemId",
+									"value": "411827493"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REPLACE ITEMS IN CART",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 1709,\r\n    \"quantity\" : 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/:cartId/items/:itemId",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								":cartId",
+								"items",
+								":itemId"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "jDBuTNfDO09NpcSg6d6me"
+								},
+								{
+									"key": "itemId",
+									"value": "411827493"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE ITEM FROM CART",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/:cartId/items/:itemId",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								":cartId",
+								"items",
+								":itemId"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "jDBuTNfDO09NpcSg6d6me"
+								},
+								{
+									"key": "itemId",
+									"value": "56220007"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CREATE BEARER TOKEN",
+			"item": [
+				{
+					"name": "GENERATE A BEARER TOKEN",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let myRequest = pm.request.body;\r",
+									"console.log(typeof myRequest);\r",
+									"let myResponse = pm.response.json();\r",
+									"console.log(typeof myResponse)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientName\": \"Mithil Saha\",\r\n    \"clientEmail\": \"mithilsaha@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/api-clients",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"api-clients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CREATE ORDER",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2fb19aec694ef15460c40d159feaf7528dded5dc4882b554371191b45778f07a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cartId\": \"nVo4eeF7518VMlyMCg6Pb\",\r\n    \"customerName\": \"Mithil Saha\",\r\n    \"comment\": \"Happy Customer!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/orders",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET ORDERS FROM GROCERY STORE",
+			"item": [
+				{
+					"name": "GET ORDERS FROM GROCERY STORE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "2fb19aec694ef15460c40d159feaf7528dded5dc4882b554371191b45778f07a",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/orders",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET SINGLE ORDER FROM GROCERY STORE",
+			"item": [
+				{
+					"name": "GET SINGLE ORDER FROM GROCERY STORE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2fb19aec694ef15460c40d159feaf7528dded5dc4882b554371191b45778f07a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/orders/:orderId",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders",
+								":orderId"
+							],
+							"variable": [
+								{
+									"key": "orderId",
+									"value": "BfOATCGlvaJ91TKx70e5R"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET INVOICE OF ORDER FROM GROCERY STORE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2fb19aec694ef15460c40d159feaf7528dded5dc4882b554371191b45778f07a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/orders/:orderId?invoice=true",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders",
+								":orderId"
+							],
+							"query": [
+								{
+									"key": "invoice",
+									"value": "true"
+								}
+							],
+							"variable": [
+								{
+									"key": "orderId",
+									"value": "BfOATCGlvaJ91TKx70e5R"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UPDATE ORDER",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2fb19aec694ef15460c40d159feaf7528dded5dc4882b554371191b45778f07a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"M Saha\",\r\n    \"comment\": \"Not a happy customer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/orders/:orderId",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders",
+								":orderId"
+							],
+							"variable": [
+								{
+									"key": "orderId",
+									"value": "_xVdTu26aGMeTZoN3V1xC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE ORDER",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2fb19aec694ef15460c40d159feaf7528dded5dc4882b554371191b45778f07a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/orders/:orderId",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders",
+								":orderId"
+							],
+							"variable": [
+								{
+									"key": "orderId",
+									"value": "_xVdTu26aGMeTZoN3V1xC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
