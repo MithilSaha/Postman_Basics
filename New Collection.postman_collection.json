@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "66bc88f7-a540-4298-8822-20e35fa5dc77",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20683446"
+	},
+	"item": [
+		{
+			"name": "Test 1",
+			"item": [
+				{
+					"name": "Req 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"200\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"setTimeout(()=>{},10000);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/status",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test 2",
+			"item": [
+				{
+					"name": "Req 2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"setTimeout(()=>{},10000);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"200\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/status",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test 3",
+			"item": [
+				{
+					"name": "Req 3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/status",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
